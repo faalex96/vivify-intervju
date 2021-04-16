@@ -23,7 +23,7 @@ const cropWidth = rating => {
   return Math.floor((rating * width) / 5);
 };
 
-const StarRating = ({ rating }) => {
+const StarRating = ({ rating, handleRatingMovie }) => {
   const containerStyle = { width: `${cropWidth(rating)}px` };
 
   return (
@@ -31,11 +31,46 @@ const StarRating = ({ rating }) => {
       <div style={styles.starsOuter}>
         <div style={containerStyle}>
           <div style={styles.starsEmptyInner}>
-            <i className="fa fa-star-o fa-lg" style={styles.star}></i>
-            <i className="fa fa-star-o fa-lg" style={styles.star}></i>
-            <i className="fa fa-star-o fa-lg" style={styles.star}></i>
-            <i className="fa fa-star-o fa-lg" style={styles.star}></i>
-            <i className="fa fa-star-o fa-lg" style={styles.star}></i>
+            <i
+              className="fa fa-star-o fa-lg"
+              id="1"
+              onClick={e => {
+                handleRatingMovie(e.target.id);
+              }}
+              style={styles.star}
+            ></i>
+            <i
+              className="fa fa-star-o fa-lg"
+              onClick={e => {
+                handleRatingMovie(e.target.id);
+              }}
+              id="2"
+              style={styles.star}
+            ></i>
+            <i
+              className="fa fa-star-o fa-lg"
+              onClick={e => {
+                handleRatingMovie(e.target.id);
+              }}
+              id="3"
+              style={styles.star}
+            ></i>
+            <i
+              className="fa fa-star-o fa-lg"
+              onClick={e => {
+                handleRatingMovie(e.target.id);
+              }}
+              id="4"
+              style={styles.star}
+            ></i>
+            <i
+              className="fa fa-star-o fa-lg"
+              onClick={e => {
+                handleRatingMovie(e.target.id);
+              }}
+              id="5"
+              style={styles.star}
+            ></i>
           </div>
           <div style={styles.starsInner}>
             <i className="fa fa-star fa-lg" style={styles.star}></i>
