@@ -13,4 +13,11 @@ export default class MovieService {
   static returnLastKey() {
     return this.movieList[this.movieList.length - 1].id;
   }
+
+  static removeMovie(movieId) {
+    let filteredList = this.movieList.filter(movie => {
+      return movie.id !== movieId;
+    });
+    this.movieList = filteredList;
+  }
 }
